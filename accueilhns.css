@@ -1,0 +1,627 @@
+/* ========================= */
+/* RESET GLOBAL */
+/* ========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+a{
+    text-decoration:none;
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+section{
+    scroll-margin-top:100px;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg,#06111d,#0b1b2b,#0f223a);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* IMAGES & MEDIA */
+img{
+    max-width:100%;
+    display:block;
+}
+
+video{
+    max-width:100%;
+}
+
+/* ========================= */
+/* ANIMATION SCROLL */
+/* ========================= */
+.section,
+.card,
+.hero-content,
+.contact,
+.grid,
+.info,
+.form,
+.project-card{
+    opacity:0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show{
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background: rgba(10,20,40,0.85);
+    backdrop-filter: blur(12px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* LOGO */
+.logo{
+    font-size:20px;
+    font-weight:700;
+    color:#ffd700;
+    letter-spacing:1px;
+}
+
+/* NAV */
+.nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    position:relative;
+    transition:0.3s;
+}
+
+/* HOVER MENU */
+.nav ul li a::after{
+    content:"";
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    width:0%;
+    height:2px;
+    background:#ffd700;
+    transition:0.3s;
+}
+
+.nav ul li a:hover{
+    color:#ffd700;
+    transform: translateY(-2px);
+}
+
+.nav ul li a:hover::after{
+    width:100%;
+}
+
+/* BUTTON DEVIS */
+.btn-devis{
+    background: linear-gradient(45deg,#ffd700,#ffb700);
+    padding:10px 18px;
+    border-radius:25px;
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+.btn-devis:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+/* HAMBURGER */
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-toggle:hover{
+    transform:rotate(90deg);
+    color:#ffd700;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 70px;
+    background: radial-gradient(circle at top,#142b4f,#0b1b2b);
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}
+
+.hero-content h1{
+    font-size:42px;
+    line-height:1.25;
+    word-break:break-word;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    opacity:0.85;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* BUTTONS HERO */
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background: linear-gradient(45deg,#ffd700,#ffcc33);
+    padding:12px 22px;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    text-align:center;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,215,0,0.2);
+}
+
+.btn-whatsapp{
+    background: linear-gradient(45deg,#25d366,#1ebc5b);
+    color:white;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+.section{
+    padding:100px 50px;
+    text-align:center;
+    width:100%;
+    max-width:100%;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:40px;
+    color:#ffd700;
+    position:relative;
+}
+
+.section h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:#ffd700;
+    display:block;
+    margin:10px auto;
+}
+
+/* DARK SECTION */
+.dark{
+    background: rgba(255,255,255,0.03);
+}
+
+/* ========================= */
+/* GRID & CARDS */
+/* ========================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    width:100%;
+}
+
+/* CARDS */
+.card{
+    background: rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+    cursor:pointer;
+    backdrop-filter: blur(5px);
+    text-decoration:none;
+    color:white;
+    width:100%;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255,215,0,0.08);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* ICONS */
+.card i{
+    font-size:28px;
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:40px;
+    width:100%;
+}
+
+.project-card{
+    background: rgba(255,255,255,0.05);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    width:100%;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+    text-align:left;
+}
+
+.project-content h3{
+    margin-bottom:12px;
+    color:#ffd700;
+    font-size:22px;
+}
+
+.project-content p{
+    opacity:0.85;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* BUTTON PROJECT */
+.project-btn{
+    display:inline-block;
+    background: linear-gradient(45deg,#ffd700,#ffb700);
+    padding:12px 22px;
+    border-radius:30px;
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    text-align:center;
+}
+
+.project-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(255,215,0,0.25);
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+.contact{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+    width:100%;
+}
+
+.info p{
+    margin-bottom:10px;
+    opacity:0.85;
+    line-height:1.6;
+}
+
+/* FORM */
+.form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    width:320px;
+    max-width:100%;
+}
+
+.form input,
+.form textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    background:white;
+    width:100%;
+    font-size:16px;
+}
+
+.form textarea{
+    min-height:120px;
+    resize:none;
+}
+
+.form button{
+    background: linear-gradient(45deg,#ffd700,#ffb700);
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+    width:100%;
+}
+
+.form button:hover{
+    transform:scale(1.05);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+footer{
+    text-align:center;
+    padding:30px 20px;
+    background:#06111d;
+    opacity:0.8;
+    line-height:1.6;
+}
+
+/* ========================= */
+/* WHATSAPP */
+/* ========================= */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25d366;
+    border-radius:50%;
+    color:white;
+    font-size:26px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ========================= */
+/* RESPONSIVE TABLET */
+/* ========================= */
+@media(max-width:992px){
+
+    .section{
+        padding:90px 30px;
+    }
+
+    .header{
+        padding:15px 30px;
+    }
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVE MOBILE */
+/* ========================= */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background: rgba(10,20,40,0.95);
+        backdrop-filter: blur(10px);
+        padding:20px;
+        z-index:999;
+    }
+
+    .nav.active{
+        display:block;
+    }
+
+    .nav ul{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav ul li a{
+        display:block;
+        padding:10px 0;
+        font-size:16px;
+    }
+
+    .header{
+        padding:15px 20px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:105px 20px 60px;
+    }
+
+    .hero-content{
+        padding-top:10px;
+    }
+
+    .hero-content h1{
+        font-size:30px;
+        line-height:1.3;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .section{
+        padding:80px 20px;
+    }
+
+    .section h2{
+        font-size:26px;
+    }
+
+    .contact{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .form{
+        width:100%;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-card img{
+        height:200px;
+    }
+
+    .project-content{
+        padding:20px;
+    }
+
+    .project-content h3{
+        font-size:20px;
+    }
+
+    .project-content p{
+        font-size:14px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+@media(max-width:480px){
+
+    .hero{
+        padding:95px 15px 50px;
+    }
+
+    .hero-content h1{
+        font-size:24px;
+    }
+
+    .section h2{
+        font-size:22px;
+    }
+
+    .btn,
+    .btn-devis,
+    .project-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+}
+
+/* ========================= */
+/* EXTRA SMALL DEVICES */
+/* ========================= */
+@media(max-width:360px){
+
+    .hero-content h1{
+        font-size:21px;
+    }
+
+    .section h2{
+        font-size:20px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .header{
+        padding:12px 15px;
+    }
+
+    .hero-content p{
+        font-size:13px;
+    }
+
+}
