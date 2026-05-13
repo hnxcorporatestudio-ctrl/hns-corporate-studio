@@ -1,0 +1,381 @@
+
+/* =========================
+RESET GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #0B0B0B;
+    color: white;
+}
+
+/* =========================
+NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 11, 11, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F5B400;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #F5B400;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* =========================
+HERO
+========================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 120px 40px 60px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* IMAGE HERO */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* =========================
+SEARCH BOX
+========================= */
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input,
+.search-box select {
+    flex: 1;
+    min-width: 140px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* =========================
+BUTTON
+========================= */
+.btn {
+    background: #FF8A00;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #F5B400;
+}
+
+/* =========================
+CATEGORIES
+========================= */
+.categories {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    color: #F5B400;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+/* =========================
+RESTAURANTS
+========================= */
+.restaurants {
+    padding: 70px 20px;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.restaurant-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.restaurant-card h3 {
+    padding: 10px;
+}
+
+.restaurant-card p {
+    padding: 0 10px 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.restaurant-card button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background: #FF8A00;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+PROMO
+========================= */
+.promo {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #FF8A00, #F5B400);
+    color: black;
+}
+
+.promo button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 8px;
+}
+
+/* =========================
+STEPS
+========================= */
+.steps {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.step-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.step-grid div {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+/* =========================
+REVIEWS
+========================= */
+.reviews {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.review-card {
+    background: #1a1a1a;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer {
+    background: #000;
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer h3,
+footer h4 {
+    color: #F5B400;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+/* =========================
+TABLET
+========================= */
+@media (max-width: 1024px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        max-width: 380px;
+    }
+}
+
+/* =========================
+MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #0B0B0B;
+        flex-direction: column;
+        display: none;
+        padding: 15px;
+        border-top: 1px solid #222;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
