@@ -1,4 +1,3 @@
-
 // =========================
 // HEADER SCROLL
 // =========================
@@ -20,7 +19,39 @@ window.addEventListener("scroll", () => {
 });
 
 // =========================
-// SMOOTH ACTIVE LINK
+// HAMBURGER MENU
+// =========================
+
+const hamburger = document.getElementById("hamburger");
+
+const navMenu = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+    hamburger.classList.toggle("open");
+
+});
+
+// CLOSE MENU WHEN CLICK LINK
+
+const menuLinks = document.querySelectorAll(".nav-links a");
+
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+        hamburger.classList.remove("open");
+
+    });
+
+});
+
+// =========================
+// ACTIVE LINK
 // =========================
 
 const navLinks = document.querySelectorAll(".nav-links a");
@@ -177,9 +208,9 @@ const hero = document.querySelector(".hero");
 
 const heroImages = [
 
-    "images/hotel-bg.jpg",
-    "images/hotel-bg2.jpg",
-    "images/hotel-bg3.jpg"
+    "imagep/espaceechange.webp",
+    "imagep/suite\ \(1\).jpeg",
+    "imagep/miawareception.webp"
 
 ];
 
@@ -421,30 +452,6 @@ scrollTopBtn.addEventListener("click", () => {
         behavior: "smooth"
 
     });
-
-});
-
-// =========================
-// MOBILE MENU SIMPLE
-// =========================
-
-const navbar = document.querySelector(".navbar");
-
-const mobileMenu = document.createElement("div");
-
-mobileMenu.classList.add("mobile-menu");
-
-mobileMenu.innerHTML = "☰";
-
-if (navbar) {
-
-    navbar.appendChild(mobileMenu);
-
-}
-
-mobileMenu.addEventListener("click", () => {
-
-    document.querySelector(".nav-links").classList.toggle("mobile-active");
 
 });
 

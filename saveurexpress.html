@@ -11,7 +11,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="saveureexpress.css">
 
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -19,20 +25,21 @@
     <div class="logo">🍔 Saveur Express</div>
 
     <ul class="nav-links">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Restaurants</a></li>
-        <li><a href="#">Catégories</a></li>
-        <li><a href="#">Promotions</a></li>
-        <li><a href="#">Réservation</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">🛒 Panier <span id="cart-count">0</span></a></li>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#categories">Catégories</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#promotions">Promotions</a></li>
+        <li><a href="#etapes">Comment ça marche</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#panier">🛒 Panier <span id="cart-count">0</span></a></li>
     </ul>
 
     <div class="menu-toggle">☰</div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero" id="accueil">
     <div class="hero-content">
         <h1>Commandez vos plats préférés partout à Abidjan</h1>
         <p>Livraison rapide de vos repas favoris dans toutes les communes.</p>
@@ -59,11 +66,10 @@
 </section>
 
 <!-- ================= CATEGORIES ================= -->
-<section class="categories">
+<section class="categories" id="categories">
     <h2>Nos Catégories</h2>
 
     <div class="grid">
-
         <div class="card">🍛 Attiéké</div>
         <div class="card">🍗 Poulet braisé</div>
         <div class="card">🍕 Pizza</div>
@@ -74,12 +80,11 @@
         <div class="card">🔥 Grillades</div>
         <div class="card">🍩 Desserts</div>
         <div class="card">🥤 Boissons</div>
-
     </div>
 </section>
 
 <!-- ================= RESTAURANTS ================= -->
-<section class="restaurants">
+<section class="restaurants" id="restaurants">
     <h2>Restaurants populaires</h2>
 
     <div class="restaurant-grid">
@@ -102,14 +107,14 @@
 </section>
 
 <!-- ================= PROMOTIONS ================= -->
-<section class="promo">
+<section class="promo" id="promotions">
     <h2>🔥 Promotions du moment</h2>
     <p>-50% sur certains plats + livraison gratuite</p>
     <button>Voir offres</button>
 </section>
 
 <!-- ================= HOW IT WORKS ================= -->
-<section class="steps">
+<section class="steps" id="etapes">
     <h2>Comment ça marche</h2>
 
     <div class="step-grid">
@@ -120,7 +125,7 @@
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
-<section class="reviews">
+<section class="reviews" id="avis">
     <h2>Avis clients</h2>
 
     <div class="review-card">
@@ -135,7 +140,7 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer>
+<footer id="contact">
     <div class="footer-container">
 
         <div>

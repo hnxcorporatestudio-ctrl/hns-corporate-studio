@@ -33,6 +33,13 @@ NAVBAR
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #1a1a1a;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
 
 .logo {
     font-size: 18px;
